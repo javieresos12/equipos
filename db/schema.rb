@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171119221221) do
+ActiveRecord::Schema.define(version: 20171119223759) do
+
+  create_table "asignaciones", force: :cascade do |t|
+    t.integer "persona_id"
+    t.date "fecha"
+    t.integer "idEstadoPersonaEquipo"
+    t.integer "eliminado"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["persona_id"], name: "index_asignaciones_on_persona_id"
+  end
 
   create_table "opciones", force: :cascade do |t|
     t.integer "idpadre"
@@ -44,6 +54,22 @@ ActiveRecord::Schema.define(version: 20171119221221) do
     t.integer "idcargo"
     t.integer "idTipoIdentificacion"
     t.integer "eliminado"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "proveedores", force: :cascade do |t|
+    t.integer "identificacion"
+    t.string "nombre"
+    t.integer "idCiudad"
+    t.integer "idDpto"
+    t.string "dirreccion"
+    t.string "correo"
+    t.integer "telefonos"
+    t.integer "idTipoProv"
+    t.integer "idEstadoProv"
+    t.integer "idCategoriaProv"
+    t.string "comentario"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

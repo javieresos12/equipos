@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :asignaciones
+  resources :proveedores
   resources :personas
   resources :rol_opcion_operaciones
   resources :opciones

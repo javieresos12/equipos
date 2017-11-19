@@ -1,0 +1,37 @@
+<%= form_with(model: asignacione, local: true) do |form| %>
+  <% if asignacione.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(asignacione.errors.count, "error") %> prohibited this asignacione from being saved:</h2>
+
+      <ul>
+      <% asignacione.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :persona_id %>
+    <%= form.text_field :persona_id, id: :asignacione_persona_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha %>
+    <%= form.date_select :fecha, id: :asignacione_fecha %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idEstadoPersonaEquipo %>
+    <%= form.number_field :idEstadoPersonaEquipo, id: :asignacione_idEstadoPersonaEquipo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :eliminado %>
+    <%= form.number_field :eliminado, id: :asignacione_eliminado %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
