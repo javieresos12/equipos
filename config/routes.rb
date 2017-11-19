@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :personas
   resources :rol_opcion_operaciones
   resources :opciones
   resources :valor_parametros
