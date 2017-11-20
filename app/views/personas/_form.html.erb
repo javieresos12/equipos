@@ -62,7 +62,8 @@
   </div>
 -->
   <div class="actions">
-    <%= form.submit "crear", :class=>"btn btn-success" %>
+    <%= form.submit "Guardar", :class=>"btn btn-secondary" %>
+    <%= link_to 'Eliminar', persona, :class => "btn btn-danger", method: :delete, data: { confirm: 'Confirme Eliminación?' } %>
   </div>
   </div>
 
