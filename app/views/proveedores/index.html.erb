@@ -2,21 +2,22 @@
 
 <h1>Proveedores</h1>
 
-<table>
+<%= link_to 'Nuevo', new_proveedore_path, :class=>"btn btn-primary btn-sm" %>
+
+<table class="table table-bordered table-sm">
   <thead>
     <tr>
-      <th>Identificacion</th>
-      <th>Nombre</th>
-      <th>Idciudad</th>
-      <th>Iddpto</th>
-      <th>Dirreccion</th>
-      <th>Correo</th>
-      <th>Telefonos</th>
-      <th>Idtipoprov</th>
-      <th>Idestadoprov</th>
-      <th>Idcategoriaprov</th>
-      <th>Comentario</th>
-      <th colspan="3"></th>
+      <th class="w-50 text-center">Identificacion</th>
+      <th class="w-50 text-center">Nombre</th>
+      <th class="w-50 text-center">Idciudad</th>
+      <th class="w-50 text-center">Iddpto</th>
+      <th class="w-50 text-center">Dirreccion</th>
+      <th class="w-50 text-center">Correo</th>
+      <th class="w-50 text-center">Telefonos</th>
+      <th class="w-50 text-center">Idtipoprov</th>
+      <th class="w-50 text-center">Idestadoprov</th>
+      <th class="w-50 text-center">Idcategoriaprov</th>
+      <th class="w-50 text-center">Comentario</th>
     </tr>
   </thead>
 
@@ -34,14 +35,12 @@
         <td><%= proveedore.idEstadoProv %></td>
         <td><%= proveedore.idCategoriaProv %></td>
         <td><%= proveedore.comentario %></td>
-        <td><%= link_to 'Show', proveedore %></td>
+        <!--<td><%= link_to 'Show', proveedore %></td>
         <td><%= link_to 'Edit', edit_proveedore_path(proveedore) %></td>
-        <td><%= link_to 'Destroy', proveedore, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', proveedore, method: :delete, data: { confirm: 'Are you sure?' } %>-->
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Proveedore', new_proveedore_path %>

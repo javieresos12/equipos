@@ -50,7 +50,7 @@
                   <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
                     <div class="card-body">
                        <ul class="nav">
-                       <li>
+                       <li class="nav-item">
                             <%= link_to 'Facturas','#' %>             
                         </li>
                         <li class="nav-item">
@@ -85,9 +85,18 @@
               </div>
               <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
             <div class="card-body">
-              <ul class="nav">
+              <ul class="nav flex-column">
                <li>
                     <%= link_to 'Usuarios',usuarios_path %>             
+                </li>
+                <li class="nav-item">
+                    <%= link_to 'Personas',personas_path %>             
+                </li>
+                <li class="nav-item">
+                    <%= link_to 'Proveedores',proveedores_path %>             
+                </li>
+                <li class="nav-item">
+                    <%= link_to 'Asignaciones',asignaciones_path %>             
                 </li>
                 <li class="nav-item">
                      <%= link_to 'Parametros',parametros_path %>                         
