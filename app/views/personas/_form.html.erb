@@ -10,58 +10,60 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+   <div class="container">
+  <div class="field form-group row col-sm-4">
     <%= form.label :nombres %>
-    <%= form.text_field :nombres, id: :persona_nombres %>
+    <%= form.text_field :nombres, id: :persona_nombres, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4 ">
     <%= form.label :apellidos %>
-    <%= form.text_field :apellidos, id: :persona_apellidos %>
+    <%= form.text_field :apellidos, id: :persona_apellidos, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4">
     <%= form.label :identificacion %>
-    <%= form.number_field :identificacion, id: :persona_identificacion %>
+    <%= form.text_field :identificacion, id: :persona_identificacion, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4">
     <%= form.label :correo %>
-    <%= form.text_field :correo, id: :persona_correo %>
+    <%= form.text_field :correo, id: :persona_correo, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4">
     <%= form.label :idEstadoPersona %>
-    <%= form.number_field :idEstadoPersona, id: :persona_idEstadoPersona %>
+    <%= form.text_field :idEstadoPersona, id: :persona_idEstadoPersona, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4">
     <%= form.label :idtipoPersona %>
-    <%= form.number_field :idtipoPersona, id: :persona_idtipoPersona %>
+    <%= form.text_field :idtipoPersona, id: :persona_idtipoPersona, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4">
     <%= form.label :idarea %>
-    <%= form.number_field :idarea, id: :persona_idarea %>
+    <%= form.text_field :idarea, id: :persona_idarea, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4">
     <%= form.label :idcargo %>
-    <%= form.number_field :idcargo, id: :persona_idcargo %>
+    <%= form.text_field :idcargo, id: :persona_idcargo, class:"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="field form-group row col-sm-4">
     <%= form.label :idTipoIdentificacion %>
-    <%= form.number_field :idTipoIdentificacion, id: :persona_idTipoIdentificacion %>
+    <%= form.text_field :idTipoIdentificacion, id: :persona_idTipoIdentificacion, class:"form-control" %>
   </div>
-
-  <div class="field">
+<!--
+  <div class="field form-group row col-sm-4">
     <%= form.label :eliminado %>
-    <%= form.number_field :eliminado, id: :persona_eliminado %>
+    <%= form.text_field :eliminado, id: :persona_eliminado, class:"form-control" %>
+  </div>
+-->
+  <div class="actions">
+    <%= form.submit "crear", :class=>"btn btn-success" %>
+  </div>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>
