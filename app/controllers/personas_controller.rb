@@ -1,4 +1,4 @@
-class PersonasController < ApplicationController
+class PersonasController < BaseController
   before_action :set_persona, only: [:show, :edit, :update, :destroy]
 
   # GET /personas

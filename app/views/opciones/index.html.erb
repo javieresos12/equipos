@@ -1,7 +1,7 @@
+<h4>Opciones</h4>
+<hr class="division">
+<%= link_to 'Nuevo', new_opcione_path, class:'btn btn-primary btn-sm' %>
 <p id="notice"><%= notice %></p>
-
-<h1>Opciones</h1>
-
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -23,16 +23,14 @@
       <tr>
         <td><%= opcione.id %></td>
         <td><%= opcione.idpadre %></td>
-        <td><%= opcione.opcion %></td>
+        <td><a class="llaves" href="/opciones/<%= opcione.id %>"> <%= opcione.opcion %></a></td>         
         <td><%= opcione.url %></td>
         <td><%= opcione.estadoopcion %></td>
         <td><%= opcione.orden %></td>
         <td><%= opcione.eshoja %></td>
         <td><%= opcione.controller %></td>
         <td><%= opcione.eliminado %></td>
-        <td><%= link_to 'Show', opcione %></td>
-        <td><%= link_to 'Edit', edit_opcione_path(opcione) %></td>
-        <td><%= link_to 'Destroy', opcione, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+       
       </tr>
     <% end %>
   </tbody>
@@ -40,4 +38,4 @@
 
 <br>
 
-<%= link_to 'New Opcione', new_opcione_path %>
+

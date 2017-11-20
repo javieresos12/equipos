@@ -1,4 +1,4 @@
-class ValorParametrosController < ApplicationController
+class ValorParametrosController < BaseController
   before_action :set_valor_parametro, only: [:show, :edit, :update, :destroy]
   require 'pp'
   # GET /valor_parametros
@@ -10,6 +10,7 @@ class ValorParametrosController < ApplicationController
       # @valor_parametros = ValorParametro.all
    
     render layout: "application1"
+    
   end
 
   # GET /valor_parametros/1
@@ -22,6 +23,7 @@ class ValorParametrosController < ApplicationController
   def new
     @valor_parametro = ValorParametro.new
     render layout: "application1"
+    
   end
 
   # GET /valor_parametros/1/edit

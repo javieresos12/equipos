@@ -1,4 +1,4 @@
-class ProveedoresController < ApplicationController
+class ProveedoresController < BaseController
   before_action :set_proveedore, only: [:show, :edit, :update, :destroy]
 
   # GET /proveedores

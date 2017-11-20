@@ -38,6 +38,8 @@
 
   <div class="actions">
     <%= form.submit "Guardar", :class=>"btn btn-secondary" %>
-    <%= link_to 'Eliminar', usuario, :class => "btn btn-danger", method: :delete, data: { confirm: 'Confirme Eliminación?' } %>
+    <% if @operaciones.include?("Eliminar") %>
+      <%= link_to 'Eliminar', usuario, :class => "btn btn-danger", method: :delete, data: { confirm: 'Confirme Eliminación?' } %>
+    <% end %>
   </div>
 <% end %>

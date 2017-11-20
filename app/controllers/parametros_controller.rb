@@ -5,6 +5,7 @@ class ParametrosController < BaseController
   # GET /parametros.json
   def index
     @parametros = Parametro.all
+     
   end
 
   # GET /parametros/1
@@ -66,6 +67,7 @@ class ParametrosController < BaseController
     # Use callbacks to share common setup or constraints between actions.
     def set_parametro
       @parametro = Parametro.find(params[:id])
+     
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

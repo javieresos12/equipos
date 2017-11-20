@@ -26,6 +26,7 @@
 	  <input type="text" class="form-control" value="<%= @estado %>" readonly>  
 	</div> 
 </form>
- <%= link_to 'Modificar', edit_usuario_path(@usuario),class:"btn btn-success" %> 
-
+<% if @operaciones.include?("Modificar") %>
+    <%= link_to 'Modificar', edit_usuario_path(@usuario),class:"btn btn-success" %>
+<% end%>
 </div>

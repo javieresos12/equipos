@@ -1,10 +1,13 @@
 <div class="container">
-<p id="notice"><%= notice %></p>
 
 <h5>Manejo de Usuarios</h5>
-<div class="navbar "> 
-<%= link_to 'Nuevo', new_usuario_path,class:'btn btn-primary btn-sm' %>
+<div class="navbar ">  
+ <% if @operaciones.include?("Crear") %>
+   <%= link_to 'Nuevo', new_usuario_path,class:'btn btn-primary btn-sm' %>
+<% end %>
+
 </div>
+<p id="notice"><%= notice %></p>
 <table class="table table-bordered">
   <thead>
     <tr>

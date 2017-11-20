@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171119223759) do
+ActiveRecord::Schema.define(version: 20171120045901) do
 
   create_table "asignaciones", force: :cascade do |t|
     t.integer "persona_id"
@@ -20,6 +20,18 @@ ActiveRecord::Schema.define(version: 20171119223759) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["persona_id"], name: "index_asignaciones_on_persona_id"
+  end
+
+  create_table "equipos", force: :cascade do |t|
+    t.string "Placa"
+    t.string "Modelo"
+    t.string "Serie"
+    t.string "IdEstadoEquipo"
+    t.string "IdTipoEquipo"
+    t.string "IdArea"
+    t.string "eliminado"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "opciones", force: :cascade do |t|
@@ -89,12 +101,12 @@ ActiveRecord::Schema.define(version: 20171119223759) do
 
   create_table "usuarios", force: :cascade do |t|
     t.string "usuario"
-    t.string "password"
     t.integer "idrol"
     t.integer "idestadousuario"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "eliminado", default: 0
+    t.string "password"
   end
 
   create_table "valor_parametros", force: :cascade do |t|
@@ -107,6 +119,20 @@ ActiveRecord::Schema.define(version: 20171119223759) do
     t.datetime "updated_at", null: false
     t.integer "parametro_id"
     t.index ["parametro_id"], name: "index_valor_parametros_on_parametro_id"
+  end
+
+  create_table "vencimientos", force: :cascade do |t|
+    t.integer "Equipo_id"
+    t.date "FechaInicion"
+    t.date "FechaFinal"
+    t.string "Comentario"
+    t.string "IdTipoVencimineto"
+    t.string "IdEstadoVencimiento"
+    t.string "Referencia"
+    t.string "eliminado"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["Equipo_id"], name: "index_vencimientos_on_Equipo_id"
   end
 
 end

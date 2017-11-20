@@ -14,6 +14,5 @@
 #
 
 class RolOpcionOperacione < ApplicationRecord
-	belongs_to :opcione
-	belongs_to :usuario
+	belongs_to :opcione	
 end

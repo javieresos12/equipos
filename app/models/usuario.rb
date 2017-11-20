@@ -27,7 +27,7 @@ class Usuario < ApplicationRecord
   private 
   def encriptarPass 
     if self.password !=nil           	
-    	self.password = Digest::MD5.hexdigest(self.password)
+    	self.password = Encriptar(self.password)
     end    
  end
 

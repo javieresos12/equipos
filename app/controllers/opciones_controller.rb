@@ -1,10 +1,11 @@
-class OpcionesController < ApplicationController
+class OpcionesController <  BaseController
   before_action :set_opcione, only: [:show, :edit, :update, :destroy]
 
   # GET /opciones
   # GET /opciones.json
   def index
     @opciones = Opcione.all
+     @operaciones=["Nada"]
   end
 
   # GET /opciones/1
@@ -63,8 +64,9 @@ class OpcionesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_opcione
+    def set_opcione      
       @opcione = Opcione.find(params[:id])
+      @operaciones=["Nada"]
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

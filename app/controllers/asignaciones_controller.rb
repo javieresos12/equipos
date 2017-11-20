@@ -1,4 +1,4 @@
-class AsignacionesController < ApplicationController
+class AsignacionesController < BaseController
   before_action :set_asignacione, only: [:show, :edit, :update, :destroy]
 
   # GET /asignaciones
